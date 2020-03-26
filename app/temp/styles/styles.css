@@ -1079,3 +1079,16 @@ Instead edit gulp/templates/sprite */
       margin-right: 1.4rem
   }
   }
+
+.site-header {
+  position: absolute;
+  z-index: 2;
+  background-color: rgba(#2f5572, 0.3);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}

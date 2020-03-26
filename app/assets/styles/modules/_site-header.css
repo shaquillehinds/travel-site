@@ -1,0 +1,7 @@
+.site-header {
+  position: absolute;
+  z-index: 2;
+  background-color: rgba($mainBlue, 0.3);
+  display: flex;
+  flex-direction: row;
+}
