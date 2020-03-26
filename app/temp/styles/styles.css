@@ -479,6 +479,7 @@ a {
   }
 
 .large-hero__text-content {
+    padding-top: 88px;
     position: absolute;
     top: 0;
     left: 0;
@@ -489,10 +490,18 @@ a {
             transform: translateY(-50%);
   }
 
+@media (min-width: 800px) {
+
+.large-hero__text-content {
+      padding-top: 60px
+  }
+  }
+
 .large-hero__title {
     font-weight: 300;
     color: #2f5572;
     font-size: 2.4rem;
+    margin: 0px;
   }
 
 @media (min-width: 530px) {
@@ -1081,14 +1090,113 @@ Instead edit gulp/templates/sprite */
   }
 
 .site-header {
+  padding: 10px 0;
   position: absolute;
+  width: 100%;
   z-index: 2;
-  background-color: rgba(#2f5572, 0.3);
+}
+
+@media (min-width: 800px) {
+
+.site-header {
+    background-color: rgba(47,85,114, 0.3)
+}
+  }
+
+.site-header__btn-container {
+    float: right;
+  }
+
+.site-header__logo {
+    position: absolute;
+    background-color: rgba(47,85,114, 1);
+    padding: 25px 36px;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%) scale(0.8);
+            transform: translateX(-50%) scale(0.8);
+    -webkit-transform-origin: 50% 0;
+            transform-origin: 50% 0;
+  }
+
+@media (min-width: 800px) {
+
+.site-header__logo {
+      left: auto;
+      -webkit-transform: translateX(0);
+              transform: translateX(0)
+  }
+  }
+
+.site-header__logo__graphic {
+    text-indent: -9999px;
+  }
+
+.site-header__menu-icon {
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+
+@media (min-width: 800px) {
+
+.site-header__menu-icon {
+      display: none
+  }
+  }
+
+.site-header__menu-content {
+    display: none;
+  }
+
+@media (min-width: 800px) {
+
+.site-header__menu-content {
+      display: block
+  }
+  }
+
+.primary-nav {
+  height: 42px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
+.primary-nav--pull-right {
+    float: right;
+  }
+
+.primary-nav ul {
+    margin: 0;
+    padding: 0;
+  }
+
+.primary-nav ul::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+.primary-nav li {
+    list-style: none;
+    float: left;
+    padding-right: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+
+.primary-nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 300;
+  }
