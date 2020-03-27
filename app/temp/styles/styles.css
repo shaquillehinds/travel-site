@@ -1105,6 +1105,9 @@ Instead edit gulp/templates/sprite */
 @media (min-width: 800px) {
 
 .site-header {
+    position: fixed;
+    /* top: 0; */
+    /* margin-bottom: -63px; */
     background-color: rgba(47,85,114, 0.3)
 }
   }
@@ -1253,6 +1256,8 @@ Instead edit gulp/templates/sprite */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: -webkit-sticky;
+  position: sticky;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1331,4 +1336,18 @@ Instead edit gulp/templates/sprite */
       padding: 0;
       background-color: transparent
   }
+  }
+
+.reveal-item {
+  opacity: 0;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: all 1500ms ease-out;
+  transition: all 1500ms ease-out;
+}
+
+.reveal-item--is-visible {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
