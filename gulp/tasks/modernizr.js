@@ -1,7 +1,7 @@
 let gulp = require("gulp"),
   modernizr = require("gulp-modernizr");
 
-gulp.task("modernizr", ["icons"], () => {
+gulp.task("modernizr", () => {
   return gulp
     .src(["./app/assets/styles/**/*.css", "./app/assets/scripts/**/*.js"])
     .pipe(
